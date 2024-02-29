@@ -6,6 +6,7 @@ metadata:
 spec:
   pipelineRef:
     name: server-deployer
+    namespace: server-deployer
   taskRunSpecs:
     - pipelineTaskName: modify-data-object
       taskServiceAccountName: modify-data-object-task
