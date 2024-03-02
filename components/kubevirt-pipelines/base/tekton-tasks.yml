@@ -340,7 +340,7 @@ spec:
     - name: verbose
       description: Enable verbose mode and tracing of libguestfs API calls.
       type: string
-      default: 'false'
+      default: 'true'
     - name: additionalOptions
       description: Additional options to pass to virt-customize.
       type: string
