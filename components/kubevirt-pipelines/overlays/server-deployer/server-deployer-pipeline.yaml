@@ -3,7 +3,6 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: server-deployer
-  namespace: openshift-cnv
 spec:
   tasks:
     - name: modify-data-object
