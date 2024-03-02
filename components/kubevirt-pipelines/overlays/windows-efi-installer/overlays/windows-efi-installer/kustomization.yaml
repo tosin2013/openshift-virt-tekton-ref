@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: windows-efi-installer
+resources:
+  - namespace.yaml
+  - ../../base
+  - windows-efi-installer-configmaps.yaml
+  - windows-efi-installer-pipeline.yaml
+  #- windows2k22-installer-pipelinerun.yaml
+  #- windows11-installer-pipelinerun.yaml
