@@ -29,8 +29,7 @@ Then it creates a VM from this PVC and deploys a flaskr server application in th
 ## How to run
 
 ```bash
-kubectl apply -f server-deployer-pipeline.yaml
-kubectl create -f server-deployer-pipelinerun.yaml
+oc apply -k components/kubevirt-pipelines/overlays/server-deployer
 ```
 
 ## Interact with the deployed app
