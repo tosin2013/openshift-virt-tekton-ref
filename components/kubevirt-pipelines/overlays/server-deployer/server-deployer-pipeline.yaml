@@ -23,7 +23,7 @@ spec:
                 volumeMode: Filesystem
               source:
                 http:
-                  url: https://download.fedoraproject.org/pub/fedora/linux/releases/39/Cloud/x86_64/images/Fedora-Cloud-Base-39-1.5.x86_64.qcow2 # https://nocix.mm.fcix.net/fedora/linux/releases/39/Cloud/x86_64/images/Fedora-Cloud-Base-39-1.5.x86_64.raw.xz
+                  url: https://nocix.mm.fcix.net/fedora/linux/releases/39/Cloud/x86_64/images/Fedora-Cloud-Base-39-1.5.x86_64.raw.xz
         - name: waitForSuccess
           value: 'true'
       taskRef:

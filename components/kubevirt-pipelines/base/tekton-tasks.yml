@@ -498,7 +498,7 @@ spec:
         - name: ADDITIONAL_VIRT_SYSPREP_OPTIONS
           value: $(params.additionalOptions)
         - name: LIBGUESTFS_BACKEND
-          value: direct
+          value: qemu # direct is default
       computeResources:
         limits:
           devices.kubevirt.io/kvm: '1'
