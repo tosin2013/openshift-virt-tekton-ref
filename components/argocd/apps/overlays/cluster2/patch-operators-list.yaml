@@ -4,5 +4,5 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
-        name: rhods-operator
-        path: components/operators/rhods-operator/operator/overlays/stable
+        name: server-deployer
+        path: components/kubevirt-pipelines/overlays/server-deployer
