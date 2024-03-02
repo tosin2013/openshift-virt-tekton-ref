@@ -19,7 +19,7 @@ spec:
                   - ReadWriteOnce
                 resources:
                   requests:
-                    storage: 7Gi
+                    storage: 10Gi
                 volumeMode: Filesystem
               source:
                 http:
