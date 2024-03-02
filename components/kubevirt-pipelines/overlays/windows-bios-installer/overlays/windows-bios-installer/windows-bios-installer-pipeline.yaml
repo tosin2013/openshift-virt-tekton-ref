@@ -43,7 +43,7 @@ spec:
     - name: baseDvNamespace
       description: Namespace of the base DataVolume which is created.
       type: string
-      default: kubevirt-os-images
+      default: windows-bios-installer
   tasks:
     - name: create-vm-root-disk
       taskRef:
