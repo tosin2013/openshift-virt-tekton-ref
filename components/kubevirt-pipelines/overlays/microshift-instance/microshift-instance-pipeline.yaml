@@ -96,7 +96,8 @@ spec:
                       cloudInitConfigDrive:
                         userData: |
                           #cloud-config
-                          password: fedora
+                          user: microshift
+                          password: r3dh@t2024
                           chpasswd: { expire: False }
         - name: ownDataVolumes
           value:
