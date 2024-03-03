@@ -44,7 +44,7 @@ oc apply -k components/kubevirt-pipelines/overlays/windows-efi-installer/overlay
 
 ### Obtain Windows ISO server 2022 download URL
 
-1. Go to https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022.
+1. Go to https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022 or https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022.
 2. Right-click Download the ISO button.
 3. Fill in all required informations and click on Download now button
 4. Select English (United States) (other languages need to be updated in `windows2k22-autounattend` ConfigMap) - 64-bit edition iso download

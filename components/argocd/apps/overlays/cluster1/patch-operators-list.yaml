@@ -21,5 +21,9 @@
       values:
         name: httpd-server
         path: components/httpd-server/overlays/default
-
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: fedora-example
+        path: components/kubevirt-pipelines/overlays/fedora-example
 
