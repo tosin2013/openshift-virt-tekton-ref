@@ -94,6 +94,8 @@ spec:
                       pod: {}
                   volumes:
                     - name: rootdisk
+                      persistentVolumeClaim:
+                        claimName: $(tasks.modify-data-object.results.name)
                     - name: cloudinitdrive
                       cloudInitConfigDrive:
                         userData: |
@@ -105,7 +107,7 @@ spec:
                             - pip3 install flask
         - name: ownDataVolumes
           value:
-            - "rootdisk:$(tasks.modify-data-object.results.name)"
+            - "$(tasks.modify-data-object.results.name)"
       runAfter:
         - generate-ssh-keys
       taskRef:
