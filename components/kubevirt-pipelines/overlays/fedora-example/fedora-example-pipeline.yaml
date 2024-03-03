@@ -98,14 +98,7 @@ spec:
                         claimName: $(tasks.modify-data-object.results.name)
                     - name: cloudinitdisk
                       cloudInitConfigDrive:
-                        userData: |-
-                          #cloud-config
-                          user: fedora
-                          password: fedora
-                          chpasswd: { expire: False }
-                          runcmd:
-                            - dnf install -y git vim python3-pip
-                            - pip3 install flask
+                        userData: "#cloud-config\nuser: fedora\npassword: e4yu-lfvm-i68o\nchpasswd: { expire: False }\nruncmd:\n  - dnf install -y git vim python3-pip\n  - pip3 install flask"
         - name: ownDataVolumes
           value:
             - "$(tasks.modify-data-object.results.name)"
