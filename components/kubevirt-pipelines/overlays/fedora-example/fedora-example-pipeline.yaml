@@ -96,7 +96,7 @@ spec:
                     - name: rootdisk
                       persistentVolumeClaim:
                         claimName: $(tasks.modify-data-object.results.name)
-                    - name: cloudinitdrive
+                    - name: cloudinitdisk
                       cloudInitConfigDrive:
                         userData: |-
                           #cloud-config
