@@ -77,7 +77,7 @@ spec:
                           bootOrder: 1
                           disk:
                             bus: virtio
-                        - name: cloudinitdrive
+                        - name: cloudinitdisk
                           disk:
                             bus: virtio
                       interfaces:
