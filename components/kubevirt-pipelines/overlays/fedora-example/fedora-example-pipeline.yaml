@@ -98,7 +98,7 @@ spec:
                         claimName: $(tasks.modify-data-object.results.name)
                     - name: cloudinitdrive
                       cloudInitConfigDrive:
-                        userData: |
+                        userData: |-
                           #cloud-config
                           user: fedora
                           password: fedora
