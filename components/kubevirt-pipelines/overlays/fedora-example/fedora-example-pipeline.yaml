@@ -100,9 +100,6 @@ spec:
                           #cloud-config
                           password: fedora
                           chpasswd: { expire: False }
-                          runcmd:
-                            - dnf install -y git vim python3-pip
-                            - pip3 install flask
         - name: ownDataVolumes
           value:
             - "rootdisk:$(tasks.modify-data-object.results.name)"
