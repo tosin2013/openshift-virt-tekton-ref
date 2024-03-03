@@ -26,4 +26,12 @@
       values:
         name: fedora-example
         path: components/kubevirt-pipelines/overlays/fedora-example
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: microshift-instance
+        path: components/kubevirt-pipelines/overlays/microshift-instance
+
+
+
 
