@@ -116,6 +116,10 @@ spec:
         - name: script
           value: |
             sudo dnf install git vim python3-pip curl firewalld -y
+            systemctl start firewalld
+            systemctl enable firewalld
+            firewall-cmd --add-port=11434/tcp --permanent
+            firewall-cmd --reload
             cd /home/fedora
             curl -fsSL https://ollama.com/install.sh | sh
             echo "OLLAMA should now be installed."
