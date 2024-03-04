@@ -118,10 +118,12 @@ spec:
             sudo dnf install git vim python3-pip curl firewalld -y
             sudo systemctl start firewalld
             sudo systemctl enable firewalld
-            sudo firewall-cmd --add-port=11434/tcp --permanent
+            sudo firewall-cmd --add-port=8501/tcp --permanent
             sudo firewall-cmd --reload
             cd /home/fedora
             git clone https://github.com/tosin2013/ollama-langchain.git
+            cd ollama-langchain
+            sudo pip3 install -r requirements.txt
       runAfter:
         - create-vm-from-manifest
       taskRef:
