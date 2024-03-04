@@ -17,12 +17,12 @@ cd ollama-langchain
 
 Start the streamlit app using 
 ```bash 
-# \bye to exit the mistral model 
+# /bye to exit the mistral model 
 # streamlit run app.py
 ```
 
 ![20240304125902](https://i.imgur.com/N5xb4L2.png)
 
 Navigate to the OpenShift Route to access your Ollama Langchain application.
-
+![20240304131017](https://i.imgur.com/VwqdzwD.png)
 ![20240304130006](https://i.imgur.com/JkOVFbn.png)
