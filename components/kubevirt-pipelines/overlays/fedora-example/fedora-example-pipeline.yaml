@@ -23,7 +23,7 @@ spec:
                 volumeMode: Filesystem
               source:
                 http:
-                  url: https://download.fedoraproject.org/pub/fedora/linux/releases/39/Server/x86_64/images/Fedora-Server-KVM-39-1.5.x86_64.qcow2
+                  url: https://download.fedoraproject.org/pub/fedora/linux/releases/39/Cloud/x86_64/images/Fedora-Cloud-Base-39-1.5.x86_64.qcow2
         - name: waitForSuccess
           value: 'true'
       taskRef:
@@ -98,7 +98,7 @@ spec:
                         claimName: $(tasks.modify-data-object.results.name)
                     - name: cloudinitdisk
                       cloudInitConfigDrive:
-                        userData: "#cloud-config\nuser: fedora\npassword: e4yu-lfvm-i68o\nchpasswd: { expire: False }\nruncmd:\n  - dnf install -y git vim python3-pip\n  - pip3 install flask"
+                        userData: "#cloud-config\nuser: fedora\npassword: e4yu-lfvm-i68o\nssh_pwauth: True\nchpasswd: { expire: False }\nruncmd:\n  - dnf install -y git vim python3-pip\n  - pip3 install flask"
         - name: ownDataVolumes
           value:
             - "$(tasks.modify-data-object.results.name)"
