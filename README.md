@@ -1,5 +1,9 @@
 # openshift-virt-tekton
 
+OpenShift 4.15 Workshop instance
+```
+oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/4.15-workshop
+```
 
 ```
 oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/cluster1

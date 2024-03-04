@@ -6,6 +6,11 @@
       values:
         name: virtualization-operator
         path: components/operators/virtualization-operator/overlays/emulation
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: virtualization-instance
+        path: components/instances/virtualization-instance
     # - cluster: local
     #   url: https://kubernetes.default.svc
     #   values:
