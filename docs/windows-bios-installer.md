@@ -1,7 +1,7 @@
 # Windows BIOS Installer Pipeline 
 
 This is an example of running the windows10-installer pipeline. 
-
+[Windows BIOS Installer Pipeline](../components/kubevirt-pipelines/overlays/windows-bios-installer/overlays/windows-bios-installer/README.md)
 
 ![20240304150512](https://i.imgur.com/qLnwSRW.png)
 

@@ -1,5 +1,5 @@
 # Windows EFI Installer Pipeline
-[Windows EFI Installer Pipeline](components/kubevirt-pipelines/overlays/windows-efi-installer/overlays/windows-efi-installer/README.md)
+[Windows EFI Installer Pipeline](../components/kubevirt-pipelines/overlays/windows-efi-installer/overlays/windows-efi-installer/README.md)
 
 ## Replace the INSERT_WINDOWS_ISO_URL with the URL of the Windows ISO file.
 
