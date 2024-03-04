@@ -1,4 +1,4 @@
-# Server Deployer Pipeline
+# Microshift 4.15 Instance
 
 Prepares a PVC from Fedora Cloud URL source and installs additional dependencies with virt-customize.
 Then it creates a VM from this PVC and deploys a flaskr server application in this VM.
