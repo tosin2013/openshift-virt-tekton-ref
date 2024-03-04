@@ -98,7 +98,7 @@ spec:
                         claimName: $(tasks.modify-data-object.results.name)
                     - name: cloudinitdisk
                       cloudInitConfigDrive:
-                        userData: "#cloud-config\nuser: fedora\npassword: e4yu-lfvm-i68o\nssh_pwauth: True\nchpasswd: { expire: False }\nruncmd:\n  - dnf install -y git vim python3-pip curl"
+                        userData: "#cloud-config\nuser: fedora\npassword: e4yu-lfvm-i68o\nssh_pwauth: True\nchpasswd: { expire: False }\nruncmd:\n  - dnf install -y git vim python3-pip curl firewalld"
         - name: ownDataVolumes
           value:
             - "$(tasks.modify-data-object.results.name)"
@@ -117,9 +117,7 @@ spec:
           value: |
             curl -fsSL https://ollama.com/install.sh | sh
             echo "OLLAMA should now be installed."
-            curl -OL https://raw.githubusercontent.com/tosin2013/ollama-langchain/main/start_ollama.sh
-            chmod +x start_ollama.sh
-            ./start_ollama.sh mistral
+            git clone https://github.com/tosin2013/ollama-langchain.git
       runAfter:
         - create-vm-from-manifest
       taskRef:
