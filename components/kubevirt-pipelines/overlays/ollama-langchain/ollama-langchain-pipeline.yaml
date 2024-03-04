@@ -115,6 +115,8 @@ spec:
           value: $(tasks.generate-ssh-keys.results.privateKeySecretName)
         - name: script
           value: |
+            curl -fsSL https://ollama.com/install.sh | sh
+            echo "OLLAMA should now be installed."
             curl -OL https://raw.githubusercontent.com/tosin2013/ollama-langchain/main/start_ollama.sh
             chmod +x start_ollama.sh
             ./start_ollama.sh mistral
