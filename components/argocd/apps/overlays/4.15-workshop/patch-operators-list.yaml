@@ -11,29 +11,35 @@
       values:
         name: virtualization-instance
         path: components/instances/virtualization-instance
-    # - cluster: local
-    #   url: https://kubernetes.default.svc
-    #   values:
-    #     name: windows-bios-installer
-    #     path: components/kubevirt-pipelines/overlays/windows-bios-installer/overlays/windows-bios-installer
-    # - cluster: local
-    #   url: https://kubernetes.default.svc
-    #   values:
-    #     name: windows-efi-installer
-    #     path: components/kubevirt-pipelines/overlays/windows-efi-installer/overlays/windows-efi-installer
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: openshift-pipelines-operator
+        path: components/operators/openshift-pipelines-operator/overlays/stable
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: windows-bios-installer
+        path: components/kubevirt-pipelines/overlays/windows-bios-installer/overlays/windows-bios-installer
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: windows-efi-installer
+        path: components/kubevirt-pipelines/overlays/windows-efi-installer/overlays/windows-efi-installer
+    - cluster: local
+       url: https://kubernetes.default.svc
+       values:
+         name: fedora-example
+         path: components/kubevirt-pipelines/overlays/fedora-example
+    - cluster: local
+       url: https://kubernetes.default.svc
+       values:
+        name: microshift-instance
+        path: components/kubevirt-pipelines/overlays/microshift-instance
     # - cluster: local
     #   url: https://kubernetes.default.svc
     #   values:
     #     name: httpd-server
     #     path: components/httpd-server/overlays/default
-    # - cluster: local
-    #   url: https://kubernetes.default.svc
-    #   values:
-    #     name: fedora-example
-    #     path: components/kubevirt-pipelines/overlays/fedora-example
-    # - cluster: local
-    #   url: https://kubernetes.default.svc
-    #   values:
-    #     name: microshift-instance
-    #     path: components/kubevirt-pipelines/overlays/microshift-instance
+
 
