@@ -1,6 +1,6 @@
 ## Openshift virt Tekton Reference Demo
 
-The `Openshift virt Tekton Reference Demo` repository is a collection of resources and configurations designed to manage OpenShift 4.15 Workshop instances using Tekton, a powerful Kubernetes-native CI/CD framework. This repository serves as a reference for applying Kubernetes configurations to OpenShift clusters, leveraging Tekton's custom resource definitions (CRDs) to create portable and efficient CI/CD pipelines.
+The `Openshift virt Tekton Reference Demo` repository is a collection of resources and configurations designed to manage OpenShift 4 instances using Tekton, a powerful Kubernetes-native CI/CD framework. This repository serves as a reference for applying Kubernetes configurations to OpenShift clusters, leveraging Tekton's custom resource definitions (CRDs) to create portable and efficient CI/CD pipelines.
 
 ## Main Purpose
 
