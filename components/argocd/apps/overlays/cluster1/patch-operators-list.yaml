@@ -31,6 +31,13 @@
       values:
         name: microshift-instance
         path: components/kubevirt-pipelines/overlays/microshift-instance
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
+        name: ollama-langchain
+        path: components/kubevirt-pipelines/overlays/ollama-langchain
+
+
 
 
 
