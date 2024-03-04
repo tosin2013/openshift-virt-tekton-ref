@@ -1,0 +1,1 @@
+Installs the *pipelines-1.14* channel of the Pipeline Operator which tracks the 1.14.X version.
