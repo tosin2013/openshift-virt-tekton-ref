@@ -27,6 +27,8 @@ To use the resources in this repository, you should have:
 
 Follow the instructions within the repository to apply the provided Kubernetes configurations to your OpenShift clusters using the `oc apply -k` command with URLs pointing to specific overlays.
 
+### Documentation contains the Examples:
+* [Documentation](docs/README.md)
 
 **OpenShift 4.15 Workshop instance**
 ```
