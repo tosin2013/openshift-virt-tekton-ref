@@ -115,6 +115,7 @@ spec:
           value: $(tasks.generate-ssh-keys.results.privateKeySecretName)
         - name: script
           value: |
+            cd /home/fedora
             curl -fsSL https://ollama.com/install.sh | sh
             echo "OLLAMA should now be installed."
             git clone https://github.com/tosin2013/ollama-langchain.git
