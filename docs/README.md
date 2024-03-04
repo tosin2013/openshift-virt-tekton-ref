@@ -1,5 +1,3 @@
-Certainly! Here's a reworded version for the GitHub contributions section:
-
 # OpenShift Virtualization Application Examples
 
 ## Microshift Instance
