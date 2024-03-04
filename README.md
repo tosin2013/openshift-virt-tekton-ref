@@ -1,10 +1,14 @@
-## Openshift virt tekton reference  
+## Openshift virt Tekton Reference Demo
 
-The `openshift-virt-tekton-ref` repository is a collection of resources and configurations designed to manage OpenShift 4.15 Workshop instances using Tekton, a powerful Kubernetes-native CI/CD framework. This repository serves as a reference for applying Kubernetes configurations to OpenShift clusters, leveraging Tekton's custom resource definitions (CRDs) to create portable and efficient CI/CD pipelines.
+The `Openshift virt Tekton Reference Demo` repository is a collection of resources and configurations designed to manage OpenShift 4.15 Workshop instances using Tekton, a powerful Kubernetes-native CI/CD framework. This repository serves as a reference for applying Kubernetes configurations to OpenShift clusters, leveraging Tekton's custom resource definitions (CRDs) to create portable and efficient CI/CD pipelines.
 
 ## Main Purpose
 
+![20240303212440](https://i.imgur.com/0hEl4Gs.png)
+
 The primary goal of this repository is to provide a structured and standardized way to manage virtual machines and their lifecycles within OpenShift environments using Tekton pipelines. It includes examples and templates that can be used to create, manage, and manipulate virtual machines (VMs), persistent volume claims (PVCs), and data volumes, as well as to run commands within VMs and handle disk images with libguestfs tools.
+
+![20240303212551](https://i.imgur.com/2G6uswF.png)
 
 ## Features
 
@@ -26,17 +30,17 @@ Follow the instructions within the repository to apply the provided Kubernetes c
 
 **OpenShift 4.15 Workshop instance**
 ```
-oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/4.15-workshop
+oc apply -k https://github.com/tosin2013/Openshift virt Tekton Reference Demo/clusters/overlays/4.15-workshop
 ```
 
 **Deploying to multiple clusters**
 *Example cluster1*
 ```
-oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/cluster1
+oc apply -k https://github.com/tosin2013/Openshift virt Tekton Reference Demo/clusters/overlays/cluster1
 ```
 *Example cluster 2*
 ```
-oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/cluster2
+oc apply -k https://github.com/tosin2013/Openshift virt Tekton Reference Demo/clusters/overlays/cluster2
 ```
 
 ![20240303212700](https://i.imgur.com/mLZjbOy.png)
@@ -48,5 +52,5 @@ oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/over
 
 ## Contributing
 
-Contributions to the `openshift-virt-tekton-ref` repository are welcome. Whether it's submitting an issue, a pull request, or suggesting new features, your input is valuable in making this resource more useful for everyone managing OpenShift virtualization with Tekton.
+Contributions to the `Openshift virt Tekton Reference Demo` repository are welcome. Whether it's submitting an issue, a pull request, or suggesting new features, your input is valuable in making this resource more useful for everyone managing OpenShift virtualization with Tekton.
 
