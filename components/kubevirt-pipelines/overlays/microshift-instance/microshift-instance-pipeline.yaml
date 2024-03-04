@@ -1,47 +1,23 @@
----
 apiVersion: tekton.dev/v1
 kind: Pipeline
 metadata:
-  name: microshift-instance
+  name: microshift-instance-wip
+  namespace: microshift-instance
 spec:
   tasks:
-    - name: modify-data-object
-      params:
-        - name: manifest
-          value: |
-            apiVersion: cdi.kubevirt.io/v1beta1
-            kind: DataVolume
-            metadata:
-              generateName: microshift-
-            spec:
-              sourceRef:
-                kind: DataSource
-                name: rhel9
-                namespace: openshift-virtualization-os-images
-              storage:
-                resources:
-                  requests:
-                    storage: 30Gi
-        - name: waitForSuccess
-          value: 'true'
-      taskRef:
-        kind: Task
-        name: modify-data-object
     - name: generate-ssh-keys
       params:
         - name: privateKeyConnectionOptions
           value:
-            - 'user:fedora'
+            - 'user:microshift'
             - 'disable-strict-host-key-checking:true'
       taskRef:
         kind: Task
         name: generate-ssh-keys
-      runAfter:
-        - modify-data-object
     - name: create-vm-from-manifest
       params:
         - name: manifest
-          value: |
+          value: |-
             apiVersion: kubevirt.io/v1
             kind: VirtualMachine
             metadata:
@@ -51,6 +27,21 @@ spec:
               labels:
                 app: microshift-vm
             spec:
+              dataVolumeTemplates:
+              - apiVersion: cdi.kubevirt.io/v1beta1
+                kind: DataVolume
+                metadata:
+                  creationTimestamp: null
+                  name: rhel9-microshift
+                spec:
+                  sourceRef:
+                    kind: DataSource
+                    name: rhel9
+                    namespace: openshift-virtualization-os-images
+                  storage:
+                    resources:
+                      requests:
+                        storage: 30Gi
               running: true
               template:
                 metadata:
@@ -91,7 +82,9 @@ spec:
                     - name: default
                       pod: {}
                   volumes:
-                    - name: rootdisk
+                    - dataVolume:
+                        name: rhel9-microshift
+                      name: rootdisk
                     - name: cloudinitdrive
                       cloudInitConfigDrive:
                         userData: |
@@ -99,9 +92,6 @@ spec:
                           user: microshift
                           password: r3dh@t2024
                           chpasswd: { expire: False }
-        - name: ownDataVolumes
-          value:
-            - "rootdisk:$(tasks.modify-data-object.results.name)"
       runAfter:
         - generate-ssh-keys
       taskRef:
