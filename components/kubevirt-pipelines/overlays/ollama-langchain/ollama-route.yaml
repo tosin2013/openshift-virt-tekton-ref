@@ -1,0 +1,17 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: ollama-langchain
+  namespace: ollama-langchain
+  labels: {}
+spec:
+  to:
+    kind: Service
+    name: ollama-langchain
+    weight: 100
+  port:
+    targetPort: 8501
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: None
+  wildcardPolicy: None

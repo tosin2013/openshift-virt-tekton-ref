@@ -6,4 +6,6 @@ resources:
   - namespace.yaml
   - ../../base
   - ollama-langchain-pipeline.yaml
+  - ollama-service.yaml
+  - ollama-route.yaml
   #- ollama-langchain-pipelinerun.yaml
