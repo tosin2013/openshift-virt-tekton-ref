@@ -1,6 +1,10 @@
 # Ollama Langchain
 
-The PipelineRun is named "ollama-langchain-btpsj3" and is part of the "ollama-langchain" project (or namespace). The goal, as mentioned, is to run "Ollama Langchain" on OpenShift in a virtual machine (VM).
+This is an example of running the ollama-langchain pipeline. 
+
+![20240304132211](https://i.imgur.com/NIf1jkW.png)
+
+The PipelineRun named "ollama-langchain-btpsj3" and is part of the "ollama-langchain" project (or namespace). The goal, as mentioned, is to run "Ollama Langchain" on OpenShift in a virtual machine (VM).
 
 ![20240304123944](https://i.imgur.com/5y4plVG.png)
 
