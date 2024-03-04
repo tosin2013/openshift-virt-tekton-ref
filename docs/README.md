@@ -7,7 +7,7 @@ The `microshift-instance` playbook is designed to set up Microshift 4.15. It is 
 Ollama Langchain is an innovative chatbot that leverages Langchain for natural language processing and response generation. Our playbook facilitates the deployment of Ollama Langchain on OpenShift within a virtual machine (VM) environment. Explore the setup guide at [ollama-langchain.md](ollama-langchain.md).
 
 ## Windows BIOS Installer
-Documentation for the Windows BIOS Installer is currently being prepared. Stay tuned for updates at [windows-bios-installer.md](windows-bios-installer.md).
+ Windows BIOS Installer installs and syspreps a machine using Windows 10 or 2019 iso's downloaded feom microsft.com. [windows-bios-installer.md](windows-bios-installer.md).
 
 ## Windows EFI Installer
 We are also working on documentation for the Windows EFI Installer. More information will be available soon at [windows-efi-installer.md](windows-efi-installer.md).
