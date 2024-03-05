@@ -4,11 +4,11 @@ This is an example of running the ollama-langchain pipeline.
 
 ![20240304132211](https://i.imgur.com/NIf1jkW.png)
 
-The PipelineRun named "ollama-langchain-btpsj3" and is part of the "ollama-langchain" project (or namespace). The goal, as mentioned, is to run "Ollama Langchain" on OpenShift in a virtual machine (VM).
+The PipelineRun is named "ollama-langchain-btpsj3" and is part of the "ollama-langchain" project (or namespace). The goal, as mentioned, is to run "Ollama Langchain" on OpenShift in a virtual machine (VM).
 
 ![20240304123944](https://i.imgur.com/5y4plVG.png)
 
-The pipelien successfully completed. The VM was created and the ollama server  was deployed in the VM.
+The pipeline successfully completed. The VM was created and the ollama server  was deployed in the VM.
 ![20240304125246](https://i.imgur.com/IFtK9id.png)
 
 Load the mistral model once you login to the VM using 
