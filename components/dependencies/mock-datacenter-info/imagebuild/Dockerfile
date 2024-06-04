@@ -10,8 +10,5 @@ ADD . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org requests
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
 # Run app.py when the container launches
 CMD ["python", "fetch_machine_info.py"]
