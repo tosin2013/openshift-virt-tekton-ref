@@ -5,7 +5,7 @@ metadata:
 spec:
   steps:
     - name: fetch-data
-      image: <your-registry>/fetch-machine-info:latest
+      image: quay.io/takinosh/mock-datacenter-info:v1
       script: |
         #!/usr/bin/env sh
         set -e
