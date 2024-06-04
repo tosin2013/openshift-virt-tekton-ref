@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: fetch-machine-info
+spec:
+  steps:
+    - name: fetch-data
+      image: <your-registry>/fetch-machine-info:latest
+      script: |
+        #!/usr/bin/env sh
+        set -e
+        machine_info=$(python /app/fetch_machine_info.py)
+        echo -n "$machine_info" > $(results.machine_info.path)
+  results:
+    - name: machine_info
+      description: The fetched machine information

@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: machine-info-pipeline-run
+spec:
+  pipelineRef:
+    name: machine-info-pipeline
+  tasks:
+    - name: fetch-machine-info
+      taskRef:
+        name: fetch-machine-info
