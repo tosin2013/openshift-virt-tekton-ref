@@ -1,0 +1,32 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: fetch-and-display-info
+spec:
+  tasks:
+    - name: fetch-info
+      taskRef:
+        name: fetch-machine-info
+      params:
+        - name: MACHINE_BASE_NAME
+          value: "testrun"
+        - name: IP_OCTET1
+          value: "192"
+        - name: IP_OCTET2
+          value: "168"
+        - name: IP_OCTET3
+          value: "100"
+    - name: display-info
+      taskRef:
+        name: fetch-machine-info
+      params:
+        - name: machine_info
+          value: $(tasks.fetch-info.results.machine_info)
+        - name: MACHINE_BASE_NAME
+          value: "testrun"
+        - name: IP_OCTET1
+          value: "192"
+        - name: IP_OCTET2
+          value: "168"
+        - name: IP_OCTET3
+          value: "100"

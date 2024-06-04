@@ -6,11 +6,22 @@ spec:
   steps:
     - name: fetch-data
       image: quay.io/takinosh/mock-datacenter-info:v1
+      env:
+      - name: MACHINE_BASE_NAME
+        value: "OPENSHIFT_VIRT"
+      - name: IP_OCTET1
+        value: "192"
+      - name: IP_OCTET2
+        value: "168"
+      - name: IP_OCTET3
+        value: "1"
       script: |
         #!/usr/bin/env sh
         set -e
         machine_info=$(python /app/fetch_machine_info.py)
         echo -n "$machine_info" > $(results.machine_info.path)
+        echo "Fetched machine information"
+        echo "Machine information: $machine_info"
   results:
     - name: machine_info
       description: The fetched machine information

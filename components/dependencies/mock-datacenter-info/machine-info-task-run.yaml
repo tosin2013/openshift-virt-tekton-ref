@@ -1,0 +1,17 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  generateName: fetch-machine-info-run-
+spec:
+  taskRef:
+    name: fetch-machine-info
+  podTemplate:
+    env:
+      - name: MACHINE_BASE_NAME
+        value: "testrun"
+      - name: IP_OCTET1
+        value: "192"
+      - name: IP_OCTET2
+        value: "168"
+      - name: IP_OCTET3
+        value: "100"
