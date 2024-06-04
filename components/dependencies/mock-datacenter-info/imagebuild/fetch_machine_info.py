@@ -1,4 +1,3 @@
-
 import json
 import os
 import random
@@ -11,7 +10,7 @@ def get_machine_info():
     octet1 = os.getenv('IP_OCTET1', '192')
     octet2 = os.getenv('IP_OCTET2', '168')
     octet3 = os.getenv('IP_OCTET3', '1')
-    octet4 = os.getenv('IP_OCTET4', '1')
+    octet4 = str(random.randint(10, 200))  # Generate random octet for fourth part of the IP address
     ip_address = f"{octet1}.{octet2}.{octet3}.{octet4}"
 
     # Generate MAC address
