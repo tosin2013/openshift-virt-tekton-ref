@@ -52,6 +52,9 @@ oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/over
 * https://www.redhat.com/en/blog/building-vm-images-using-tekton-and-secrets
 
 
+## To allow for rhel virtual machines to be created and registered with the Red Hat Subscription Manager:
+`Settings->Guest management->Automatic subscription of new RHEL VirtualMachines`
+
 ## Contributing
 
 Contributions to the `Openshift Virtualization Tekton Reference Demo` repository are welcome. Whether it's submitting an issue, a pull request, or suggesting new features, your input is valuable in making this resource more useful for everyone managing OpenShift virtualization with Tekton.
