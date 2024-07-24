@@ -1,29 +1,40 @@
----
 apiVersion: tekton.dev/v1
 kind: Pipeline
 metadata:
-  name: fedora-cleanup
+  name: delete-fedora-vm
 spec:
+  params:
+    - name: vmName
+      description: The name of the VM to be cleaned up
+      type: string
+    - name: dataVolumeName
+      description: The name of the DataVolume to be deleted
+      type: string
+    - name: pvcName
+      description: The name of the PVC to be deleted
+      type: string
   tasks:
-    - name: create-vm-from-manifest
-      taskRef:
-        kind: Task
-        name: create-vm-from-manifest
-    - name: modify-data-object
-      taskRef:
-        kind: Task
-        name: modify-data-object
     - name: cleanup-vm
       params:
         - name: vmName
-          value: $(tasks.create-vm-from-manifest.results.name)
+          value: $(params.vmName)
+        - name: vmNamespace
+          value: "fedora-example"
+        - name: stop
+          value: "true"
+        - name: delete
+          value: "true"
       taskRef:
         kind: Task
         name: cleanup-vm
-    - name: delete-data-object
+    - name: delete-data-volume
       params:
-        - name: name
-          value: $(tasks.modify-data-object.results.name)
+        - name: deleteObjectKind
+          value: "DataVolume"
+        - name: deleteObjectName
+          value: $(params.dataVolumeName)
+        - name: namespace
+          value: "fedora-example"
       runAfter:
         - cleanup-vm
       taskRef:
