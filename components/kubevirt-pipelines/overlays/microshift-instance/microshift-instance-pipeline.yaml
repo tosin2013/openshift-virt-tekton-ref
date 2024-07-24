@@ -105,6 +105,9 @@ spec:
           value: $(tasks.generate-ssh-keys.results.privateKeySecretName)
         - name: script
           value: |
+            sudo subscription-manager repos \
+              --enable rhocp-4.16-for-rhel-9-$(uname -m)-rpms \
+              --enable fast-datapath-for-rhel-9-$(uname -m)-rpms
             sudo dnf install -y microshift
       runAfter:
         - create-vm-from-manifest
