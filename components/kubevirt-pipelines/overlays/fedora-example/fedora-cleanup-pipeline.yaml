@@ -5,19 +5,19 @@ metadata:
   name: fedora-cleanup
 spec:
   tasks:
-    - name: delete-vm
+    - name: cleanup-vm
       params:
         - name: vmName
           value: $(tasks.create-vm-from-manifest.results.name)
       taskRef:
         kind: Task
-        name: delete-vm
+        name: cleanup-vm
     - name: delete-data-object
       params:
         - name: name
           value: $(tasks.modify-data-object.results.name)
       runAfter:
-        - delete-vm
+        - cleanup-vm
       taskRef:
         kind: Task
         name: delete-data-object
