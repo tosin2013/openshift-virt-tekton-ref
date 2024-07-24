@@ -9,6 +9,11 @@
     - cluster: local
       url: https://kubernetes.default.svc
       values:
+        name: external-secrets-operator
+        path: components/operators/external-secrets-operator/operator/overlays/stable
+    - cluster: local
+      url: https://kubernetes.default.svc
+      values:
         name: windows-bios-installer
         path: components/kubevirt-pipelines/overlays/windows-bios-installer/overlays/windows-bios-installer
     - cluster: local
