@@ -5,6 +5,10 @@ metadata:
   name: fedora-cleanup
 spec:
   tasks:
+    - name: create-vm-from-manifest
+      taskRef:
+        kind: Task
+        name: create-vm-from-manifest
     - name: cleanup-vm
       params:
         - name: vmName
