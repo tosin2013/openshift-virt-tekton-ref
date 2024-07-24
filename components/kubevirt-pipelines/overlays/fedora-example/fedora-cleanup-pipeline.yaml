@@ -1,0 +1,23 @@
+---
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: fedora-cleanup
+spec:
+  tasks:
+    - name: delete-vm
+      params:
+        - name: vmName
+          value: $(tasks.create-vm-from-manifest.results.name)
+      taskRef:
+        kind: Task
+        name: delete-vm
+    - name: delete-data-object
+      params:
+        - name: name
+          value: $(tasks.modify-data-object.results.name)
+      runAfter:
+        - delete-vm
+      taskRef:
+        kind: Task
+        name: delete-data-object
