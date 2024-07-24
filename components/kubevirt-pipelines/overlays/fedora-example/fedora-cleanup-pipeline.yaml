@@ -9,6 +9,10 @@ spec:
       taskRef:
         kind: Task
         name: create-vm-from-manifest
+    - name: modify-data-object
+      taskRef:
+        kind: Task
+        name: modify-data-object
     - name: cleanup-vm
       params:
         - name: vmName
