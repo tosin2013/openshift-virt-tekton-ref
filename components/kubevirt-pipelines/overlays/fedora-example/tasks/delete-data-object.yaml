@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: delete-data-object
+spec:
+  params:
+    - name: name
+      type: string
+  steps:
+    - name: delete-data-object
+      image: kubevirt/kubevirt-cli:latest
+      command: ["kubectl"]
+      args: ["delete", "dataobject", "$(params.name)"]
