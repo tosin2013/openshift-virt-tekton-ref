@@ -34,6 +34,14 @@ spec:
           value: $(params.activation-key)
         - name: org
           value: $(params.org)
+        - name: activation-key
+          value: $(params.activation-key)
+        - name: org
+          value: $(params.org)
+        - name: activation-key
+          value: $(params.activation-key)
+        - name: org
+          value: $(params.org)
             apiVersion: kubevirt.io/v1
             kind: VirtualMachine
             metadata:
@@ -110,6 +118,13 @@ spec:
                           user: microshift
                           password: r3dh@t2024
                           chpasswd: { expire: False }
+                          rh_subscription:
+                            activation-key: $(params.activation-key)
+                            org: $(params.org)
+                          packages:
+                            - dnf-automatic
+                          runcmd:
+                            - systemctl enable --now dnf-automatic-install.timer
                           rh_subscription:
                             activation-key: $(params.activation-key)
                             org: $(params.org)
