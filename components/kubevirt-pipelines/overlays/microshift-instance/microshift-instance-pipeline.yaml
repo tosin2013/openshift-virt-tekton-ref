@@ -105,6 +105,8 @@ spec:
           value: $(tasks.generate-ssh-keys.results.privateKeySecretName)
         - name: script
           value: |
+            sudo subscription-manager refresh
+            sudo subscription-manager attach --auto
             sudo subscription-manager repos \
               --enable rhocp-4.16-for-rhel-9-$(uname -m)-rpms \
               --enable fast-datapath-for-rhel-9-$(uname -m)-rpms
