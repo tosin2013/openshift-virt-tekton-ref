@@ -10,9 +10,6 @@ spec:
     - name: dataVolumeName
       description: The name of the DataVolume to be deleted
       type: string
-    - name: pvcName
-      description: The name of the PVC to be deleted
-      type: string
   tasks:
     - name: cleanup-vm
       params:
