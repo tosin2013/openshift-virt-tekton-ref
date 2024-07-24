@@ -37,7 +37,7 @@ oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/over
 
 **OpenShift 4.16 Workshop instance**
 ```
-oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/4.15-workshop
+oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/4.16-workshop
 ```
 
 **Deploying to multiple clusters**  
