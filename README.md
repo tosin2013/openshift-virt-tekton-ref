@@ -35,6 +35,11 @@ Follow the instructions within the repository to apply the provided Kubernetes c
 oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/4.15-workshop
 ```
 
+**OpenShift 4.16 Workshop instance**
+```
+oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/overlays/4.15-workshop
+```
+
 **Deploying to multiple clusters**  
 *Example cluster1*
 ```
@@ -54,7 +59,7 @@ oc apply -k https://github.com/tosin2013/openshift-virt-tekton-ref/clusters/over
 
 ## To allow for rhel virtual machines to be created and registered with the Red Hat Subscription Manager:
 `Settings->Guest management->Automatic subscription of new RHEL VirtualMachines`
-
+![20240723185006](https://i.imgur.com/zKmhvmG.png)
 ## Contributing
 
 Contributions to the `Openshift Virtualization Tekton Reference Demo` repository are welcome. Whether it's submitting an issue, a pull request, or suggesting new features, your input is valuable in making this resource more useful for everyone managing OpenShift virtualization with Tekton.
