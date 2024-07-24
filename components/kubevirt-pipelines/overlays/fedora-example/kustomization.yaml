@@ -6,4 +6,5 @@ resources:
   - namespace.yaml
   - ../../base
   - fedora-example-pipeline.yaml
+  - fedora-cleanup-pipeline.yaml
   #- fedora-example-pipelinerun.yaml
