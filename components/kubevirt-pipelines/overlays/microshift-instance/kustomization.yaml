@@ -6,4 +6,5 @@ resources:
   - namespace.yaml
   - ../../base
   - microshift-instance-pipeline.yaml
+  - microshift-cleanup-pipeline.yaml
   #- microshift-instance-pipelinerun.yaml
