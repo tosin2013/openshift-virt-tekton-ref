@@ -1,0 +1,39 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: delete-microshift-vm
+spec:
+  params:
+    - name: vmName
+      description: The name of the VM to be cleaned up
+      type: string
+    - name: dataVolumeName
+      description: The name of the DataVolume to be deleted
+      type: string
+  tasks:
+    - name: cleanup-vm
+      params:
+        - name: vmName
+          value: $(params.vmName)
+        - name: vmNamespace
+          value: "microshift-instance"
+        - name: stop
+          value: "true"
+        - name: delete
+          value: "true"
+      taskRef:
+        kind: Task
+        name: cleanup-vm
+    - name: delete-data-volume
+      params:
+        - name: deleteObjectKind
+          value: "DataVolume"
+        - name: deleteObjectName
+          value: $(params.dataVolumeName)
+        - name: namespace
+          value: "microshift-instance"
+      runAfter:
+        - cleanup-vm
+      taskRef:
+        kind: Task
+        name: delete-data-object
